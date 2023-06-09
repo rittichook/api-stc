@@ -7,6 +7,7 @@ import { UsersModule } from './users/users.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ContentModule } from './content/content.module';
 import { ContentCategolyModule } from './content_categoly/content_categoly.module';
+import { ProfileModule } from './profile/profile.module';
 
 @Module({
   imports: [
@@ -24,6 +25,7 @@ import { ContentCategolyModule } from './content_categoly/content_categoly.modul
     }),
     ContentModule,
     ContentCategolyModule,
+    ProfileModule,
   ],
   controllers: [AppController],
   providers: [AppService],
