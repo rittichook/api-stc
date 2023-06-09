@@ -11,12 +11,17 @@ export class ContentController {
 
   @Get()
   getUsers() {
-    return this.contentService.getUsers();
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve(this.contentService.getUsers());
+      }, 3000); // Delay of 1 second
+    });
   }
+  
 
   @Post()
   addContent(@Body() content: Content) {
-    return this.contentService.addcontent(content);
+    return this.contentService.addContent(content);
   }
 
   // Rest of the controller methods...

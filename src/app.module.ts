@@ -6,6 +6,7 @@ import { AppService } from './app.service';
 import { UsersModule } from './users/users.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ContentModule } from './content/content.module';
+import { ContentCategolyModule } from './content_categoly/content_categoly.module';
 
 @Module({
   imports: [
@@ -22,6 +23,7 @@ import { ContentModule } from './content/content.module';
       autoLoadEntities: true,
     }),
     ContentModule,
+    ContentCategolyModule,
   ],
   controllers: [AppController],
   providers: [AppService],

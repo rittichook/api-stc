@@ -1,6 +1,7 @@
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity('contents')
+
 export class Content {
     @PrimaryGeneratedColumn()
     id?: number;
@@ -52,10 +53,6 @@ export class Content {
     
       @Column('uuid', { name: 'deleted_by', nullable: true })
       deletedBy: string | null;
-
-
-
-
 }
 
 
